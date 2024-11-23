@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ExpertiseContainer = styled.div`
-  padding: 120px 80px;
+  padding: 80px 80px;
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
   display: flex;

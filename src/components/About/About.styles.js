@@ -5,7 +5,7 @@ export const AboutContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 80px;
-  padding: 120px 80px;
+  padding: 120px 80px 0 120px;
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
   transition: background-color 0.5s ease, color 0.5s ease;
@@ -36,11 +36,12 @@ export const InfoSection = styled.div`
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.blossom};
-  font-size: 18px;
-  font-family: "Karla", sans-serif;
+  font-size: 24px;
+  font-family: ${({ theme }) => theme.fonts.title};
   font-weight: 500;
   text-transform: uppercase;
   transition: color 0.5s ease;
+  margin-top: 12px;
 `;
 
 export const Subtitle = styled.h2`

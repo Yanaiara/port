@@ -11,6 +11,7 @@ export const WorksContainer = styled.div`
     color: ${({ theme }) => theme.colors.blossom};
     margin-bottom: 40px;
     text-align: center;
+    font-family: ${({ theme }) => theme.fonts.title};
   }
 
   @media (max-width: 768px) {

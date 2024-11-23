@@ -57,6 +57,7 @@ const About = () => {
         />
         <StyledImage
           src="https://media.licdn.com/dms/image/v2/D4D03AQFtIeKmGJ2GSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1702418205552?e=1737590400&v=beta&t=MNrrNazYHmHDKB4Sa2rBRTFvt62MqkxDmX-9wvXknN8"
+          loading="lazy"
           alt="Procurar foto"
         />
 

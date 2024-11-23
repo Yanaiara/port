@@ -36,7 +36,7 @@ const Expertise = () => {
 
   return (
     <ExpertiseContainer>
-      <ExpertiseTitle>My Expertise</ExpertiseTitle>
+      <ExpertiseTitle>Expertise</ExpertiseTitle>
       <CardContainer>
         {expertiseData.map((item, index) => (
           <ExpertiseCard key={index} bgColor={item.bgColor}>
