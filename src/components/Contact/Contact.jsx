@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { EMAILJS_CONFIG } from "../../emailConfig";
 import {
   ContactContainer,
   ContentWrapper,
@@ -13,31 +14,46 @@ import {
   TextAreaField,
   SubmitSection,
   SubmitButton,
+  FeedbackMessage,
+  Form,
 } from "./Contact.styles";
 
 const Contact = () => {
   const formRef = useRef();
   const [status, setStatus] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const form = formRef.current;
+
+    const email = form.email.value;
+    const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!validateEmail(email)) {
+      setStatus("error-email");
+      return;
+    }
+
+    setIsSending(true);
+
     emailjs
       .sendForm(
-        "service_2ty0q17",
-        "template_2a8giyl",
-        formRef.current,
-        "60wcKgl1dOHd1Ug1a"
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        form,
+        EMAILJS_CONFIG.PUBLIC_KEY
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           setStatus("success");
-          formRef.current.reset();
+          setIsSending(false);
+          form.reset();
         },
-        (error) => {
-          console.log(error.text);
+        () => {
           setStatus("error");
+          setIsSending(false);
         }
       );
   };
@@ -56,7 +72,7 @@ const Contact = () => {
           </Description>
         </InfoSection>
         <FormWrapper>
-          <form ref={formRef} onSubmit={sendEmail}>
+          <Form ref={formRef} onSubmit={sendEmail}>
             <FormRow>
               <InputField placeholder="Seu nome" name="name" required />
               <InputField placeholder="Sobrenome" name="surname" required />
@@ -75,18 +91,26 @@ const Contact = () => {
               fullWidth
             />
             <SubmitSection>
-              <SubmitButton type="submit">Enviar Mensagem</SubmitButton>
+              <SubmitButton type="submit" disabled={isSending}>
+                {isSending ? "Enviando..." : "Enviar Mensagem"}
+              </SubmitButton>
             </SubmitSection>
-          </form>
+          </Form>
           {status === "success" && (
-            <p style={{ color: "green", marginTop: "20px" }}>
-              Mensagem enviada com sucesso!
-            </p>
+            <FeedbackMessage success>
+              ✅ Sua mensagem foi enviada com sucesso! Entrarei em contato em
+              breve.
+            </FeedbackMessage>
           )}
           {status === "error" && (
-            <p style={{ color: "red", marginTop: "20px" }}>
-              Ocorreu um erro ao enviar a mensagem. Tente novamente.
-            </p>
+            <FeedbackMessage>
+              ❌ Ocorreu um erro ao enviar sua mensagem. Tente novamente.
+            </FeedbackMessage>
+          )}
+          {status === "error-email" && (
+            <FeedbackMessage>
+              ❌ O e-mail informado é inválido. Por favor, revise.
+            </FeedbackMessage>
           )}
         </FormWrapper>
       </ContentWrapper>

@@ -73,11 +73,19 @@ export const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const FormRow = styled.div`
   display: flex;
   gap: 16px;
+  margin-bottom: 10px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -87,6 +95,7 @@ export const FormRow = styled.div`
 export const InputField = styled.input`
   flex: 1;
   padding: 12px 16px;
+  margin-bottom: 10px;
   border: 2px solid ${({ theme }) => theme.colors.text};
   border-radius: 8px;
   font-size: 16px;
@@ -95,9 +104,6 @@ export const InputField = styled.input`
   background-color: ${({ theme }) =>
     theme.isDarkMode ? theme.colors.blossom : theme.colors.background};
   transition: border-color 0.3s, box-shadow 0.3s;
-
-  margin: 12px 0;
-  width: 100%;
 
   &:focus {
     outline: none;
@@ -106,34 +112,21 @@ export const InputField = styled.input`
   }
 `;
 
-export const TextAreaField = styled.textarea`
-  width: 100%;
-  padding: 12px 16px;
-  border: 2px solid ${({ theme }) => theme.colors.text};
-  border-radius: 8px;
-  font-size: 16px;
-  font-family: ${({ theme }) => theme.fonts.primary};
-  color: ${({ theme }) => theme.colors.text};
-  background-color: ${({ theme }) =>
-    theme.isDarkMode ? theme.colors.blossom : theme.colors.background};
-  transition: border-color 0.3s, box-shadow 0.3s;
+export const TextAreaField = styled(InputField).attrs({ as: "textarea" })`
   resize: none;
-
-  &:focus {
-    outline: none;
-    border-color: ${({ theme }) => theme.colors.detail};
-    box-shadow: 0 0 8px ${({ theme }) => theme.colors.detail};
-  }
+  /* height: 120px;  */
+  margin-bottom: 10px;
 `;
 
 export const SubmitSection = styled.div`
   display: flex;
   justify-content: center;
+  /* margin-top: 16px; */
 `;
 
 export const SubmitButton = styled.button`
   padding: 12px 24px;
-  font-size: 16px;
+  font-size: 18px;
   font-family: ${({ theme }) => theme.fonts.primary};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.background};
@@ -150,6 +143,11 @@ export const SubmitButton = styled.button`
 
   &:active {
     transform: scale(0.95);
+  }
+
+  &:disabled {
+    background-color: ${({ theme }) => theme.colors.textSecondary};
+    cursor: not-allowed;
   }
 `;
 
