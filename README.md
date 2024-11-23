@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# 🦸‍♀️ Port Powerpuff Girls - Identidade Visual
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto utiliza uma identidade visual inspirada nas Meninas Superpoderosas, com suporte a **Light Mode** e **Dark Mode**. Aqui estão os detalhes da identidade visual que eu escolhi.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎨 Paleta de Cores
 
-### `npm start`
+### **Light Mode**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Elemento              | Cor HEX   | Exemplo                                                         |
+| --------------------- | --------- | --------------------------------------------------------------- |
+| **Fundo Principal**   | `#FFFFFF` | ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/FFFFFF?text=+) |
+| **Texto Principal**   | `#1B1B1B` | ![#1B1B1B](https://via.placeholder.com/15/1B1B1B/1B1B1B?text=+) |
+| **Blossom (Rosa)**    | `#FF9AC1` | ![#FF9AC1](https://via.placeholder.com/15/FF9AC1/FF9AC1?text=+) |
+| **Bubbles (Azul)**    | `#B2E4F9` | ![#B2E4F9](https://via.placeholder.com/15/B2E4F9/B2E4F9?text=+) |
+| **Buttercup (Verde)** | `#9EE09E` | ![#9EE09E](https://via.placeholder.com/15/9EE09E/9EE09E?text=+) |
+| **Botão/Detalhe**     | `#FFC107` | ![#FFC107](https://via.placeholder.com/15/FFC107/FFC107?text=+) |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Dark Mode**
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Elemento              | Cor HEX   | Exemplo                                                         |
+| --------------------- | --------- | --------------------------------------------------------------- |
+| **Fundo Principal**   | `#1B1B1B` | ![#1B1B1B](https://via.placeholder.com/15/1B1B1B/1B1B1B?text=+) |
+| **Texto Principal**   | `#FFFFFF` | ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/FFFFFF?text=+) |
+| **Blossom (Rosa)**    | `#FF72AC` | ![#FF72AC](https://via.placeholder.com/15/FF72AC/FF72AC?text=+) |
+| **Bubbles (Azul)**    | `#68BDF2` | ![#68BDF2](https://via.placeholder.com/15/68BDF2/68BDF2?text=+) |
+| **Buttercup (Verde)** | `#61B461` | ![#61B461](https://via.placeholder.com/15/61B461/61B461?text=+) |
+| **Botão/Detalhe**     | `#FFEB3B` | ![#FFEB3B](https://via.placeholder.com/15/FFEB3B/FFEB3B?text=+) |
+# port
